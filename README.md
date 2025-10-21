@@ -1,21 +1,22 @@
-# Speech-to-Text (STT) Service
+# LLM-Service
 
 ## Overview
 
-This repository contains the **Speech-to-Text (STT)** microservice for the **Podcast Recommendation Platform**.  
-It is designed to **convert podcast audio into text** using the **Vosk speech recognition engine**, and expose the functionality through a **FastAPI** application with **gRPC** support for high-performance communication.
+This repository contains the **LLM-Service**, a modular microservice designed to interact with **Large Language Models (LLMs)** such as **Google Gemini** or **Ollama**.  
+It exposes both **REST (FastAPI)** and **gRPC** endpoints, allowing other components in the **Podcast Recommendation Platform** to leverage LLMs for tasks like text summarization, metadata generation, and semantic understanding.
 
-The service is containerized for easy deployment and scalability.
+The service is **containerized with Docker** for easy deployment and scalability across environments.
 
 ---
 
 ## Key Features
 
--  **Speech Recognition** powered by [Vosk](https://alphacephei.com/vosk/)  
--  **FastAPI** REST and **gRPC** endpoints for real-time transcription  
--  **Dockerized** for deployment consistency  
--  Supports streaming or batch transcription modes  
--  Can be integrated with Kafka for asynchronous processing  
+-  **FastAPI** RESTful interface for LLM queries  
+-  Support for multiple backends — **Gemini** and **Ollama**  
+-  **gRPC** interface for low-latency, high-throughput communication  
+-  Fully **Dockerized** microservice  
+-  Configurable authentication and rate limiting  
+-  Asynchronous request handling for concurrent LLM calls  
+-  Easily extendable to integrate new models or APIs  
 
 ---
-
