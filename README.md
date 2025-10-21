@@ -1,22 +1,23 @@
-# LLM-Service
+# Recommendation-Engine
 
 ## Overview
 
-This repository contains the **LLM-Service**, a modular microservice designed to interact with **Large Language Models (LLMs)** such as **Google Gemini** or **Ollama**.  
-It exposes both **REST (FastAPI)** and **gRPC** endpoints, allowing other components in the **Podcast Recommendation Platform** to leverage LLMs for tasks like text summarization, metadata generation, and semantic understanding.
+This repository contains the **Recommendation-Engine** microservice, a core component of the **Podcast Recommendation Platform**.  
+It leverages **embedding-based similarity** using the **All-Mini-Mistral model** to generate podcast recommendations based on content and user interactions.
 
-The service is **containerized with Docker** for easy deployment and scalability across environments.
+The service exposes a **gRPC API** for efficient low-latency inference and integrates with a **vector database** (e.g., Milvus, Qdrant ) to store and query embeddings using **cosine similarity**.
 
 ---
 
 ## Key Features
 
--  **FastAPI** RESTful interface for LLM queries  
--  Support for multiple backends — **Gemini** and **Ollama**  
--  **gRPC** interface for low-latency, high-throughput communication  
--  Fully **Dockerized** microservice  
--  Configurable authentication and rate limiting  
--  Asynchronous request handling for concurrent LLM calls  
--  Easily extendable to integrate new models or APIs  
+-  **All-Mini-Mistral** embedding model for semantic vector representations  
+-  **Cosine similarity** for matching podcast content and user interests  
+-  **gRPC API** for scalable, real-time recommendations  
+-  **Vector database** integration (Milvus / Qdrant )  
+-  Batch and real-time embedding generation  
+-  Integration-ready with upstream services (API, LLM, STT, Scrapers)  
+-  Fully **Dockerized** for portability and deployment consistency  
 
 ---
+
