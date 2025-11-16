@@ -8,7 +8,6 @@ It leverages **embedding-based similarity** using the **All-Mini-Mistral model**
 The service exposes a **gRPC API** for efficient low-latency inference and integrates with a **vector database** (e.g., Milvus, Qdrant ) to store and query embeddings using **cosine similarity**.
 
 ---
-
 ## Key Features
 
 -  **All-Mini-Mistral** embedding model for semantic vector representations  
@@ -18,6 +17,4 @@ The service exposes a **gRPC API** for efficient low-latency inference and integ
 -  Batch and real-time embedding generation  
 -  Integration-ready with upstream services (API, LLM, STT, Scrapers)  
 -  Fully **Dockerized** for portability and deployment consistency  
-
 ---
-
